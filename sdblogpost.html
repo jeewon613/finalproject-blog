@@ -45,7 +45,7 @@
 	    </div>
 	  </nav>
 	  <div class="hero-wrap js-fullheight">
-      <div class="overlay"></div>
+      <div class="overlay2"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
           <div class="col-lg-10 ftco-animate d-flex align-items-center">
@@ -199,7 +199,8 @@
               float: left;
               width: 33.33%;
               display: none; /* Hide all elements by default */
-              background-color: lightgray;
+              background-color: white;
+
             }
 
             /* Clear floats after rows */
@@ -214,6 +215,8 @@
               background-color: white;
               padding: 10px;
               margin: 0.5em;
+              border: 2px solid orange;
+              border-radius: 3px;
             }
 
             /* The "show" class is added to the filtered elements */
@@ -223,7 +226,7 @@
 
             /* Style the buttons */
             .btnt {
-              border: solid 2px blue;
+              border: solid 2px orange;
               border-radius: 0.5em;
               outline: none;
               padding: 12px 2em ;
@@ -234,7 +237,7 @@
             }
 
             .btnt:hover {
-              background-color: blue;
+              background-color: darkorange;
             }
 
             .btnt.active {
@@ -256,9 +259,9 @@
    background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
 }
 .modal-content {
-   background-color: var(--bg);
    color: var(--text);
-   margin: 1rem auto;
+   margin-top: 8em;
+   margin-left: 4em;
    padding: 1em;
    width: 92%;
    border-radius: 4px;
@@ -273,8 +276,8 @@
    font-weight: bold;
    position: absolute; /*-- always at the top right of the modal --*/
    top: 5px;
-   right: 4.25%;
-   transition: all .2s ease-in;
+   right: 2%;
+   transition: all .1s ease-in;
    text-shadow: 2px 2px 5px #FAFAFA,
                -2px -2px 5px #FAFAFA,
                2px -2px 5px #FAFAFA,
@@ -282,7 +285,7 @@
 }
 .close:hover,
 .close:focus {
-   color: var(--accent);
+   color: orange;
    text-decoration: none;
    cursor: pointer;
 }
@@ -307,6 +310,9 @@
   .modal-body {grid-template-columns: 7fr 5fr;}
 
 }
+.blogmodalimg{
+
+}
             </style>
 
             <body>
@@ -324,7 +330,7 @@
             <!-- Portfolio Gallery Grid -->
             <div class="rowt">
               <div class="columnt nature" >
-                <div class="contentt">
+                <div data-modal="#01" class="contentt">
                   <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
                   <h4>Mountains</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -335,7 +341,7 @@
 
 
               <div class="columnt nature">
-                <div class="contentt">
+                <div data-modal="#02" class="contentt">
                 <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
                   <h4>Lights</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -347,7 +353,7 @@
 
 
               <div class="columnt nature">
-                <div class="contentt">
+                <div data-modal="#03" class="contentt">
                 <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
                   <h4>Forest</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -358,7 +364,7 @@
 
 
               <div class="columnt cars">
-                <div class="contentt">
+                <div data-modal="#04" class="contentt">
                   <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
                   <h4>Retro</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -370,7 +376,7 @@
 
 
               <div class="columnt cars">
-                <div class="contentt">
+                <div  data-modal="#05" class="contentt">
                 <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
                   <h4>Fast</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -382,7 +388,7 @@
 
 
               <div class="columnt cars">
-                <div class="contentt">
+                <div data-modal="#06" class="contentt">
                 <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
                   <h4>Classic</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -394,7 +400,7 @@
 
 
               <div class="columnt people">
-                <div class="contentt">
+                <div data-modal="#07" class="contentt">
                   <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
                   <h4>Girl</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -404,7 +410,7 @@
 
 
               <div class="columnt people">
-                <div class="contentt">
+                <div data-modal="#08" class="contentt">
                 <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
                   <h4>Man</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -414,7 +420,7 @@
 
 
               <div class="columnt people">
-                <div class="contentt">
+                <div data-modal="#09" class="contentt">
                 <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
                   <h4>Woman</h4>
                   <p>Lorem ipsum dolor..</p>
@@ -485,7 +491,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="https://picsum.photos/800/450/?image=59" alt="example" />
+          <img class="blogmodalimg" src="https://picsum.photos/800/450/?image=59" alt="example" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -498,7 +504,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="https://picsum.photos/800/450/?image=59" alt="example" />
+          <img class="blogmodalimg" src="https://picsum.photos/800/450/?image=59" alt="example" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -512,7 +518,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="" alt="example2" />
+          <img class="blogmodalimg" src="" alt="example2" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -526,7 +532,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="https://picsum.photos/800/450/?image=59" alt="example" />
+          <img class="blogmodalimg" src="https://picsum.photos/800/450/?image=59" alt="example" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -540,7 +546,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="https://picsum.photos/800/450/?image=59" alt="example" />
+          <img class="blogmodalimg" src="https://picsum.photos/800/450/?image=59" alt="example" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -554,7 +560,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="https://picsum.photos/800/450/?image=59" alt="example" />
+          <img class="blogmodalimg" src="https://picsum.photos/800/450/?image=59" alt="example" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -568,7 +574,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="https://picsum.photos/800/450/?image=59" alt="example" />
+          <img class="blogmodalimg" src="https://picsum.photos/800/450/?image=59" alt="example" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -582,7 +588,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="https://picsum.photos/800/450/?image=59" alt="example" />
+          <img class="blogmodalimg" src="https://picsum.photos/800/450/?image=59" alt="example" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -595,7 +601,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <div class="modal-body">
-          <img src="https://picsum.photos/800/450/?image=59" alt="example" />
+          <img class="blogmodalimg" src="https://picsum.photos/800/450/?image=59" alt="example" />
           <div class="eg-text">
             <h3>Really Old Fence Photo</h3>
             <p>This photo of the fence is really old. The fence isn't old, it's new, but the photo is really, really old . . . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

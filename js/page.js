@@ -1,5 +1,5 @@
 // Image modal functions - Requires jQuery!!!
-$(".button").on("click", function() { // when item with class of button is clicked, fire function
+$(".contentt").on("click", function() { // when item with class of button is clicked, fire function
   var modal = $(this).data("modal"); // sets modal var equal to data attribute
   $(modal).show(); // opens up modal (much code hidden here by jQuery)
 });
