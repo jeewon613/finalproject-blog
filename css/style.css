@@ -7159,7 +7159,10 @@ button.bg-dark:focus {
 
 .ml-auto,
 .mx-auto {
-  margin-left: auto !important; }
+  margin-left: 28em !important;
+  padding-right: 0 !important;
+  width: 1000em;;
+}
 
 @media (min-width: 576px) {
   .m-sm-0 {
